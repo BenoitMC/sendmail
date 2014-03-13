@@ -11,8 +11,13 @@ module Sendmail
     end
   end
   
-  def sendmail!(to, mail)
-    io = IO.popen([Sendmail.bin, Sendmail.args, to], "w+b")
+  def sendmail!(mail, opts = {})
+    bin     = opts[:bin]  || Sendmail.bin
+    args    = opts[:args] || Sendmail.args
+    command = [bin, args]
+    command << opts[:to] if opts.key?(:to)
+    
+    io = IO.popen(command, "w+b")
     io.write(mail)
     io.close
     $?.to_i == 0
