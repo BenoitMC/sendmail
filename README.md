@@ -16,7 +16,7 @@ Change sendmail bin :
 
     Sendmail.bin = "/path/to/sendmail"
 
-Default bin is `which sendmail`.
+Default bin is `"sendmail"`.
 
 Change sendmail arguments :
 

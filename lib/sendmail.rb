@@ -3,7 +3,7 @@ module Sendmail
     attr_accessor :bin, :args
     
     def bin
-      @bin ||= `which sendmail`.chomp!
+      @bin ||= "sendmail"
     end
     
     def args
