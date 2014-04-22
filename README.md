@@ -23,3 +23,7 @@ Change sendmail arguments :
     Sendmail.args = "-it"
 
 Default arguments is `"-i"`
+
+## Install
+
+    gem install sendmail-command
