@@ -4,6 +4,8 @@ Sendmail command in Ruby.
 
 ## Usage
 
+    require "sendmail"
+    
     Sendmail.sendmail! "Subject: Hello\n\nText...", to: "to@example.tld"
     #=> true/false
     
